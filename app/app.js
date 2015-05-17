@@ -65,7 +65,7 @@ app.connect = function(user)
 				app.showInfo('Connected to <i>' + BLEId + '</i>');
 				document.getElementById('BLEButton').innerHTML = 'Disconnect';
 				document.getElementById('BLEButton').onclick = new Function('app.disconnect()');
-				document.getElementById('ledControl').style.display = 'block';
+				// document.getElementById('ledControl').style.display = 'block';
 				document.getElementById('temperatureDisplay').style.display = 'block';
 
 				// Application is now connected
@@ -73,7 +73,7 @@ app.connect = function(user)
 				app.device = device;
 
 				// Fetch current LED values.
-				app.synchronizeLeds();
+				// app.synchronizeLeds();
 
 				// Create an interval timer to periocally read temperature.
 				app.interval = setInterval(function() { app.readTemperature(); }, 5);
@@ -144,7 +144,7 @@ app.disconnect = function(user)
 	app.device = null;
 
 	// Hide user inteface
-	document.getElementById('ledControl').style.display = 'none';
+	// document.getElementById('ledControl').style.display = 'none';
 	document.getElementById('temperatureDisplay').style.display = 'none';
 
 	// Stop any ongoing scan and close devices.
