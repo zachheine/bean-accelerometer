@@ -162,7 +162,7 @@ app.readTemperature = function()
 	function onDataReadSuccess(data)
 	{
 		var temperatureData = new Uint8Array(data);
-		var temperature = temperatureData[0];
+		var temperature = 'X: ' + temperatureData[0] + 'Y: ' + temperatureData[1] + 'Z: ' + temperatureData[2];
 		// console.log('Temperature read: ' + temperature + ' C');
 		document.getElementById('temperature').innerHTML = temperature;
 	}
